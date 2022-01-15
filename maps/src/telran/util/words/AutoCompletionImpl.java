@@ -26,6 +26,8 @@ public class AutoCompletionImpl implements AutoCompletion {
 		
 		return words.subSet(prefix, getPrefixLimit(prefix));
 	}
+	// V.R. Code duplication! The same code is used by AutoCompletionMapImpl.
+	// The ways to prevent code duplication were discussed at the last webinar
 	public   String getPrefixLimit(String prefix) {
 		char lastChar = prefix.charAt(prefix.length() - 1);
 		char limitChar = (char) (lastChar + 1);

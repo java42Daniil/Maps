@@ -41,6 +41,8 @@ HashMap<Character, TreeSet<String>> words = new HashMap<>(); //key - first chara
 		return tree==null ? new TreeSet<String>() : 
 			tree.subSet(prefix, getPrefixLimit(prefix));
 		}
+	// V.R. Code duplication! The same code is used by AutoCompletionImpl.
+	// The ways to prevent code duplication were discussed at the last webinar
 	private String getPrefixLimit(String prefix) {
 		char lastChar = prefix.charAt(prefix.length() - 1);
 		char limitChar = (char) (lastChar + 1);

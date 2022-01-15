@@ -29,6 +29,7 @@ class AutoCompletionTest {
 
 		@Test
 		void addRemoveTest() {
+			// V.R. Very good deep tests!
 			assertFalse(autoCompletion.addWord(""));
 			assertTrue(autoCompletion.addWord("hello"));
 			assertFalse(autoCompletion.addWord("hello"));
